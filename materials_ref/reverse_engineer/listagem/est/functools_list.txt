@@ -1,0 +1,15 @@
+01# Função binomial -
+02# Função desvio Binomial -
+03# Função varianciaBinomial -
+04# Função modaBinomial -
+05# Função Poisson -
+06# Função desvioPoisson -
+07# função varianciaPoisson -
+08# função modaPoisson -
+09# função media -
+10# função mediana -
+11# função soma -
+12# função retira -
+13# função pMaiorIgual -
+14# função pMaior -
+15# função Comb -

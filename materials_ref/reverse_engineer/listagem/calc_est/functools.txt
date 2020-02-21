@@ -1,0 +1,12 @@
+01# função destroi -
+02# função Especial -
+03# função Del -
+04# função devolverResultado (está repetido) -
+05# função erro -
+06# função devolveResultado (está repetido) - 
+07# função recebe_N_e_P -
+08# função calcula -
+09# função AchaFuncNome -
+10# função pegaParametros -
+11# função calculaSoma -
+12# função GO -
