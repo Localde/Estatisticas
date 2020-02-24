@@ -1,0 +1,113 @@
+tkinter: Módulo de Interface Gráfica.
+
+1) O que isso faz?
+
+R:
+
+2) Para que isso serve?
+
+R:
+
+3) Como isso funciona?
+
+R:
+
+-------------------------------------------------------------------------------------------
+LEGENDAS
+-------------------------------------------------------------------------------------------
+tk(): Função do Módulo de Interface Gráfica, cria a Interface Gráfica. Exemplo: instancia = Tk()
+
+geometry(): Define a área da Interface Gráfica. Exemplo: instancia.geometry('800x600')
+
+mainloop(): Executa o programa. Exemplo: instancia.mainloop()
+
+title(): Dá um título a tela. Exemplo: instancia.title('Calculadora para Estatística')
+
+wm_iconbitmap(): Cria um ícone ao aplicativo. Exemplo: instancia.wm_iconbitmap('icone.ico')
+
+Label(): Cria uma caixa na Interface Gráfica. Exemplo: texto = Label(instancia, text='Ola Mundo!!', bg='red', fg='blue') Ps: Após isso texto.pack() para inserir o Objeto.
+
+text: É um parametro do Label para escrever texto.
+Exemplo: text='Ola Mundo'
+
+bg: É um parâmetro para colorir a caixa Label().
+Exemplo: bg='red'
+
+fg: É um parâmetro para colorir um texto do Label(). Exemplo: fg:'blue' 
+
+Button(): Parâmetro para criar botão. Exemplo: b = Button(i, text='Clique') Ps: Após isso b.pack() para inserir o Objeto.
+
+pack(): Chama o Objeto aonde quiser. Exemplo: texto.pack(), b.pack()
+
+Entry(): Cria uma caixa de inserção de texto. Exemplo: ent = Entry(i) Após isso ent.pack() para inserir o Objeto. 
+
+command: É um parâmetro da função 'Button' que permite executar outra função de sua escolha. Exemplo: 
+def Calcular():
+print('Calculando!')
+calc = Button(instancia, text='Calcule', command=Calcular)
+calc.pack()
+
+get: Este método permite uma variável receber o valor de outra variável. Exemplo:
+form = Entry(instancia)
+form.pack()
+resultado[	'text'] = form.get()
+print(f'resultado['text']')
+
+side: É um parâmetro da função 'pack' que ordena algum objeto. Exemplo: a.pack(side=LEFT), a.pack(side=RIGHT), a.pack(side=TOP), a.pack(side=BOTTON)
+
+class: É um termo usado para criar uma classe de objetos, dentro dessa classe pode conter um conjunto de funções e instruções que serão executadas nela mesma usando o parâmetro 'self'. Exemplo:
+class ContadordeNomes(object):
+	def __init__(self, instancia):
+		self.nome = str(input('Digite seu nome: ')
+		print('O {nome} é foda.')
+ContadordeNomes(instancia)
+
+width: É um parâmetro que define largura. Exemplo: a = Button(subframe, text=botões[i], bg='green', width=25)
+
+pady: É um parâmetro que adiciona espaçamento entre os objetos. Exemplo: self.frame4 = Frame(instancia, pady=20)
+
+padx: É um parâmetro que adiciona espaçamento entro os objetos um pouco maior que o pady. Exemplo: a = Button(subframe, text=botões[i], bg='green', width=25, padx=5)
+
+font: Para adicionar uma font faça o seguinte:
+self.font = ('Verdana', '20', 'bold')
+self.font2 = ('Verdana', '14', 'bold')
+self.calc = Button(self.frame3, text='Calcule', command=self.Calcular, font=self.font)
+a = Button(subframe, text=botões[i], bg='green', width=25, padx=5, font=self.font2)
+
+PhotoImage: Adiciona Imagens no programa. Exemplo: logo = PhotoImage(file='gif.gif')
+#Logo do aplicativo
+        self.logo = Label(self.frame1)
+        self.logo['image'] = logo
+        self.logo.image = logo
+        self.logo.pack()
+
+Checkbutton: Adiciona uma mini caixa de seleção. Exemplo: 
+self.b_binomial = Checkbutton(self.framec, text='Modo Binomial', bg=AZUL, font=self.font)
+self.b_binomial.pack()
+
+deselect(): Tira a seleção de um objeto. Exemplo:
+self.b_poisson.deselect()
+
+insert(): Esta função insere algo dentro de um campo de texto ao selecionar um objeto especificado. Exemplo: 
+a = Button(subframe, text=botões[i], bg='green', width=25, padx=5, command=(lambda:self.ColocarTexto(botões[i])))
+    def ColocarTexto(self, texto):
+        self.form.insert(END, texto)
+
+functools: É um módulo usado para decorar uma função, ou seja ela possui funções que recebe como parâmetro outras funções sem comprometer o estado original dessa função que está como parâmetro.
+-------------------------------------------------------------------------------------------
+partial: É uma função do módulo 'functools' que permite desativar partes de uma outra função, sem perder essas partes desativadas para caso for necessario seu uso no futuro. Exemplo:
+
+def soma(x,y):
+    return x + y 
+  
+nova_soma = functools.partial(soma, 0) #Atribuindo um valor padrão para x.  
+
+#agora x esta "desativado" na função nova_soma() e não pode ser setado.
+print(nova_soma(4)) #saída --> 4
+
+nova_soma_v2 = functools.partial(soma, y=3) #Atribuindo um valor padrão para y.  
+print(nova_soma_v2(5)) #saída --> 8
+print(nova_soma_v2(5, y=10)) #saída --> 15
+--------------------------------------------------------------------------------------------
+ delete: função que deleta algo. Exemplo:
+self.form.delete(0, END)
